@@ -1,0 +1,26 @@
+.BarChart{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    
+    .title{
+
+        h3{
+            padding: 0.5rem 3rem;
+
+            @media screen and (max-width: 500px) {
+                padding: 0.5rem;
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+    svg{
+        max-height: 300px;
+        min-height: 200px;
+    }
+
+}

@@ -1,0 +1,38 @@
+.chartBox{
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    .textInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 2;
+
+        .title{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+    }
+
+    .chartInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+
+        .chart{
+            flex: 1;
+        }
+        
+        .texts{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+    }
+
+
+}

@@ -1,0 +1,41 @@
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main{
+  font-family: 'Inter', sans-serif;
+  // display: flex;
+  background-color: $main-bg;
+  color: $main-color;
+}
+
+.container{
+  display: flex;
+}
+
+.menusContainer{
+  width: 250px;
+  padding: 5px 10px;
+  border-right: 5px solid $dark-bg;
+}
+
+.contentContainer{
+  width: 100%;
+  padding: 5px 10px;
+}
+
+@mixin flex-C {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
