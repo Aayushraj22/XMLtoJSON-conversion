@@ -1,17 +1,15 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import "./pieChartBox.scss";
+import { useSelector } from "react-redux";
 
 function PieChartBox() {
-  const data = [
-    { name: "Mobile", value: 400, color: "#0088FE" },
-    { name: "Desktop", value: 300, color: "#00C49F" },
-    { name: "Laptop", value: 300, color: "#FFBB28" },
-    { name: "Tablet", value: 200, color: "#FF8042" },
-  ];
+
+  const state = useSelector(state => state)
+  let data = state.genderRatio
 
   return (
     <div className="pieChartBox">
-      <h1>Leads by Source</h1>
+      <h1>Genders</h1>
       <div className="chart">
         <ResponsiveContainer
           width="99%"
@@ -19,8 +17,8 @@ function PieChartBox() {
         >
           <PieChart>
             <Tooltip 
-                contentStyle={{background:'white', borderRadius: '5px'}}
-            
+                contentStyle={{background:'white', borderRadius: '2px'}}
+                animationDuration={1500}
             />
 
             <Pie
@@ -37,6 +35,7 @@ function PieChartBox() {
           </PieChart>
         </ResponsiveContainer>
       </div>
+
       <div className="options">
         {data.map((item, i) => (
           <div className="option" key={i}>

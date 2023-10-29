@@ -9,8 +9,9 @@ import { useNavigate } from 'react-router-dom'
 function Navbar() {
   const navigate = useNavigate();
   const { isAuthenticated, user, loginWithRedirect, logout } = useAuth0()
-
   const [isOpen, setIsOpen] = useState(false)
+
+
 
   const handleLogout = () => {
     logout({ logoutParams: { returnTo: window.location.origin } });
@@ -26,6 +27,7 @@ function Navbar() {
   }
 
 
+
   return (
     <div className="navbar">
 
@@ -36,12 +38,12 @@ function Navbar() {
 
       {isAuthenticated ?
         <div className="icons">
-          <div className="btn not-mobile">
+          {/* <div className="btn not-mobile">
             <Button onClick={() => navigate('/')}>Home </Button>
-          </div>
-          <div className="btn not-mobile">
+          </div> */}
+          {/* <div className="btn not-mobile">
             <Button onClick={() => navigate('/file')}>Upload </Button>
-          </div>
+          </div> */}
           <img src="search.svg" alt="icon" />
           <div className="notification">
             <img src="notifications.svg" alt="icon" />
@@ -61,7 +63,7 @@ function Navbar() {
           <div className="links">
             <span className='mobile' onClick={() => handleClick('/')}>Home </span>
             <span className='mobile' onClick={() => handleClick('/file')}>upload </span>
-            <span style={{cursor: "pointer", color: 'navy'}} onClick={handleLogout}>Logout </span>
+            <span style={{cursor: "pointer", color: 'dodgerblue'}} onClick={handleLogout}>Logout </span>
 
           </div>
         </div>}

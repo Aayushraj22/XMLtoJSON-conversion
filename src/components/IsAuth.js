@@ -7,7 +7,6 @@ import Loader from './Loader'
 
 const IsAuth = () => {
     const {isAuthenticated,isLoading} = useAuth0();
-
     if(isLoading) 
         return <Loader />
         

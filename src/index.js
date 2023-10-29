@@ -6,10 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 
 import { Theme } from "./Theme";
 import { ThemeProvider } from "styled-components";
-
 import { BrowserRouter as Router } from "react-router-dom";
-
 import Auth0ProviderWithNavigate from "./components/Auth0ProviderWithNavigate";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 // const onRedirectCallback = (appState) => {
 //   history.push(
@@ -17,23 +17,18 @@ import Auth0ProviderWithNavigate from "./components/Auth0ProviderWithNavigate";
 //   );
 // };
 
-
-const root = ReactDOM.createRoot(document.getElementById("root"))
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <Router>
     <Auth0ProviderWithNavigate>
-      <ThemeProvider theme={Theme}>
-        <App />
-      </ThemeProvider>
+      <Provider store={store}>
+        <ThemeProvider theme={Theme}>
+          <App />
+        </ThemeProvider>
+      </Provider>
     </Auth0ProviderWithNavigate>
   </Router>
-
-
-      // <ThemeProvider theme={Theme}>
-      //   <App />
-      // </ThemeProvider>
-
 );
 
 // If you want to start measuring performance in your app, pass a function

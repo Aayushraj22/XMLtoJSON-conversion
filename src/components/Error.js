@@ -5,8 +5,8 @@ import {useAuth0} from '@auth0/auth0-react'
 
 const Box = styled.div`
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  flex: 1;
+  height: 100%;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;

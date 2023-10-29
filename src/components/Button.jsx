@@ -2,21 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const SharedButton = styled.button`
-  padding: 0.6rem 1.5rem;
-  border: 1px solid black;
-  background-color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  background-color: black;
+  color: white;
+
   border-radius: 0.2rem;
-  color: black;
   font-family: "Inter";
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
   cursor: pointer;
 
   &:hover {
-    background-color: black;
+    background-color: #1e1d1d;
     color: white;
   }
 `;

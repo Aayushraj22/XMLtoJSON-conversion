@@ -1,6 +1,7 @@
 .Personal{
-    width: 100vw;
-    max-height: 100vh;
+    // width: 100vw;
+    flex: 1;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +9,7 @@
     .view{
         display: flex;
         flex-direction: column;
-        background-color: whitesmoke;
+        background-color: rgb(126, 120, 120);
         gap: 0.5rem;
         padding: 2rem;
         border-radius: 1rem;

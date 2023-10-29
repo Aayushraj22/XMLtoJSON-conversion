@@ -1,19 +1,27 @@
 import React, { useState, useEffect } from "react";
 import './file.scss';
 import { BsCloudUpload } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Papa from "papaparse";
 import Button from "../../components/Button";
+import { useDispatch } from "react-redux";
+import { toFileUploaded, toGenderRatio, toNewTableData } from "../../redux/fileUpload";
+import { getGenderRatio } from "../../utils/functions";
 
 
 function File() {
-
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
+  const [JsonData, setJsonData] = useState(null);
+  
   const [files, setFiles] = useState({
     file: null,
     errors: "",
   });
-  const [csv, setCsv] = useState(null);
+
+ 
+
   var commonConfig = { delimiter: "," };
 
   // destructing of object
@@ -31,9 +39,23 @@ function File() {
         file: null,
         errors: "Choose the correct file !",
       });
-      if (csv !== null) setCsv(null);
+      if (JsonData !== null) setJsonData(null);
     }
   };
+
+  const handleClick = () => {
+
+    // remove the last element of jsonData as it contains only id, and index of array is going from 0 to length of array before removal of last element 
+    const jsondata = JsonData.slice(1, JsonData.length - 1)
+
+    navigate('/users');
+    dispatch(toFileUploaded(jsondata));
+    dispatch(toNewTableData(jsondata));
+    dispatch(toGenderRatio(genderData));
+  }
+
+  const genderData = getGenderRatio(JsonData)
+  
 
   useEffect(() => {
         
@@ -44,13 +66,12 @@ function File() {
         ...commonConfig,
         header: true, // it's neccessary to get json , if omitted then :- recieves array of arrays
         complete: (result) => {
-          setCsv(result.data);
+          setJsonData(result.data);
         },
       });
     }
     // else console.log("else block");
   }, [file]);
-
 
 
   return (
@@ -65,9 +86,7 @@ function File() {
         <input type="file" style={{ display: "none" }} />
       </label>
       {file && (
-        <Link to="/files" state={csv} style={{ textDecorationLine: "none" }}>
-          <Button>Preview</Button>
-        </Link>
+        <Button onClick={handleClick}>Preview</Button>
       )}
     </div>
   );

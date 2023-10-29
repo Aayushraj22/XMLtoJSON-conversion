@@ -15,6 +15,12 @@ export const menu = [
           url: "/users/1",
           icon: "user.svg",
         },
+        {
+          id: 3,
+          title: 'Upload',
+          url: '/file',
+          icon: 'upload.svg',
+        }
       ],
     },
     {
@@ -32,18 +38,6 @@ export const menu = [
           title: "Products",
           url: "/products",
           icon: "product.svg",
-        },
-        {
-          id: 3,
-          title: "Orders",
-          url: "/orders",
-          icon: "order.svg",
-        },
-        {
-          id: 4,
-          title: "Posts",
-          url: "/posts",
-          icon: "post2.svg",
         },
       ],
     },
@@ -87,12 +81,6 @@ export const menu = [
           url: "/",
           icon: "setting.svg",
         },
-        {
-          id: 2,
-          title: "Backups",
-          url: "/",
-          icon: "backup.svg",
-        },
       ],
     },
     {
@@ -105,12 +93,6 @@ export const menu = [
           url: "/",
           icon: "chart.svg",
         },
-        {
-          id: 2,
-          title: "Logs",
-          url: "/",
-          icon: "log.svg",
-        },
       ],
     },
   ];
@@ -118,52 +100,66 @@ export const menu = [
   export const topDealUsers = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/8405873/pexels-photo-8405873.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      image_url: "https://images.pexels.com/photos/8405873/pexels-photo-8405873.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
       username: "Elva McDonald",
       email: "elva@gmail.com",
       amount: "3.668",
+      first_name: 'Elva ',
+      last_name: 'McDonald ',
     },
     {
       id: 2,
-      img: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      image_url: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1600",
       username: "Linnie Nelson",
       email: "linnie@gmail.com",
       amount: "3.256",
+      first_name: 'Linnie ',
+      last_name: ' Nelson',
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      image_url: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1600",
       username: "Brent Reeves",
       email: "brent@gmail.com",
       amount: "2.998",
+      first_name: 'Brent ',
+      last_name: ' Reeves',
     },
     {
       id: 4,
-      img: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      image_url: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1600",
       username: "Adeline Watson",
       email: "adeline@gmail.com",
       amount: "2.512",
+      first_name: ' Adeline',
+      last_name: 'Watson ',
     },
     {
       id: 5,
-      img: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      image_url: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1600",
       username: "Juan Harrington",
       email: "juan@gmail.com",
       amount: "2.134",
+      first_name: ' Juan',
+      last_name: ' Harrington',
     },
     {
       id: 6,
-      img: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      image_url: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1600",
       username: "Augusta McGee",
       email: "augusta@gmail.com",
       amount: "1.932",
+      first_name: 'Augusta ',
+      last_name: ' McGee',
     },
     {
       id: 7,
-      img: "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      image_url: "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=1600",
       username: "Angel Thomas",
       email: "angel@gmail.com",
       amount: "1.560",
+      first_name: ' Angel',
+      last_name: 'Thomas ',
     },
   ];
   
@@ -309,7 +305,7 @@ export const menu = [
     ],
   };
   
-  export const userRows = [
+  export const demoUser = [
     {
       id: 1,
       img: "https://images.pexels.com/photos/8405873/pexels-photo-8405873.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
@@ -722,3 +718,8 @@ export const menu = [
     ],
   };
   
+  export const genderData = [
+    {name: 'male', color: 'green', value: 40},
+    {name: 'female', color: 'yellow', value: 60},
+    {name: 'other', color: 'red', value: 10},
+  ]

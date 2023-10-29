@@ -7,7 +7,7 @@ const Auth0ProviderWithNavigate = ({ children }) => {
 
   const domain = process.env.REACT_APP_AUTH0_DOMAIN;
   const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
-  const redirectUri = process.env.REACT_APP_AUTH0_CALLBACK_URL;
+  const redirectUri = window.location.origin;
 
   // the user will redirects from '/' path to the path they are intending to access before logging
   const onRedirectCallback = (appState) => {

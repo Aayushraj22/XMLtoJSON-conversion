@@ -1,17 +1,22 @@
 @import '../../styles/variables.scss';
 
 .home{
-    // border: 10px solid red;
+    // background: pink;
     height: 100%;
     width: 100%;
+    flex: 1;
     display: grid;
     gap: 20px;
     padding: 20px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 24%);
     grid-auto-rows: minmax(180px, auto);
 
+    @media screen and (max-width: 1400px) {
+        grid-template-columns: repeat(3,33%);
+    }
     @media screen and (max-width: 1024px) {
-        grid-template-columns: repeat(2,50%);
+        grid-template-columns: repeat(2,48%);
+
     }
 
     @media screen and (max-width: 520px) {

@@ -11,6 +11,9 @@ function Add({setOpen, colums, slug}) {
   function handleSubmit(e) {
     e.preventDefault();
 
+    setOpen((prev) => !prev)
+    
+
     console.log("form submitted, your data is : ", e.target);
   }
 
