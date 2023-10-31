@@ -42,8 +42,7 @@ function App() {
         <div className="contentContainer">
           <Routes>
             <Route path="/" element={<Home />} />
-{/* 
-            <Route path="/dash" element={<Protected component={Home} />} /> */}
+            <Route path="/home" element={<Protected component={Home} />} /> 
             <Route path="/users" element={<Protected component={Users} />} />
             <Route path="/users/:id" element={<Protected component={User} />} />
             

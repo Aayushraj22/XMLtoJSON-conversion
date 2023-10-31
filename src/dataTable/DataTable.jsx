@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./dataTable.scss";
 
-import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 
 // type Props = {
 //   columns: GridColDef[];
@@ -19,7 +19,7 @@ function DataTable({columns, rows, slug}) {
     }
 
 
-  const actionColumn: GridColDef = {
+  const actionColumn = {
     field: "actions",
     headerName: "Actions",
     width: 200,

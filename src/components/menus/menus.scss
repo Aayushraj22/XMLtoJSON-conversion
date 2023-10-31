@@ -13,6 +13,8 @@
             font-weight: 200;
             font-style: 12px;
             color: $soft-color;
+
+            
         }
         
         a{
@@ -25,6 +27,11 @@
             &:hover{
                 background: $soft-bg;
             }
+
+        }
+
+        & > a.active{
+            background-color: navy;
         }
 
     }

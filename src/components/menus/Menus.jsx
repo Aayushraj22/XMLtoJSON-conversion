@@ -1,5 +1,5 @@
 import "./menus.scss";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { menu } from "../../data";
 import { useAuth0 } from '@auth0/auth0-react';
 
@@ -14,18 +14,17 @@ function Menus() {
     loginWithRedirect();
   };
 
-
   return (
 
     <div className="menu" >
       {menu.map((item => (
         <div className="item" key={item.id}>
-          <span className="title">{item.title.toUpperCase()} </span>
+          <span className='title'>{item.title.toUpperCase()} </span>
           {item.listItems.map((listItem) => (
-            <Link to={listItem.url} key={listItem.id}>
+            <NavLink to={listItem.url} key={listItem.id} end>
               <img src={listItem.icon} alt={listItem.title} />
               <span className="listItemTitle">{listItem.title}</span>
-            </Link>
+            </NavLink>
           ))
 
           }
