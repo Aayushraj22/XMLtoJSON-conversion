@@ -6,16 +6,7 @@
     .item{
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        margin-bottom: 20px;
-    
-        .title{
-            font-weight: 200;
-            font-style: 12px;
-            color: $soft-color;
-
-            
-        }
+        gap: 1rem;
         
         a{
             gap: 10px;
@@ -23,10 +14,35 @@
             align-items: center;
             border-radius: 5px;
             padding: 10px;
+
+            img{
+                height: 30px;
+                width: 30px;
+                object-fit: cover;
+                position: relative;
+
+                @media screen and (min-width: 768px) and (max-width: 1024px) {
+                    height: 40px;
+                    width: 40px;
+                }
+
+            }
             
             &:hover{
                 background: $soft-bg;
+
+                & > img{
+                    animation: updownEffect 1s ease-in-out infinite;
+                    
+                }
             }
+
+            @media screen and (max-width: 1024px) {
+                & > span{
+                    display: none;
+                }
+            }
+
 
         }
 
@@ -34,5 +50,20 @@
             background-color: navy;
         }
 
+
+    }
+
+}
+
+
+@keyframes updownEffect{
+    0%{
+       top: 0; 
+    }
+    50%{
+        top: 3px;
+    }
+    100%{
+        top: 0;
     }
 }

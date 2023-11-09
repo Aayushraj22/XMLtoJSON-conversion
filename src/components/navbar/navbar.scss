@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .navbar{
     display: flex;
     justify-content: space-between ;
@@ -69,27 +71,36 @@
     }
 
     .toolbar{
+        font-size: 0.9rem;
         display: flex;
         position: absolute;
         z-index: 5;
         right: 0;
         top: 100%;
-        background: #384256;
+        background: $dark-bg;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
+        gap: 1rem;
         height: 320px;
         padding: 1rem;
-        width: 180px;
+        min-width: 180px;
+        width: 220px;
+        transition: all 1s ease-in-out;
 
         .links {
             display: flex;
             flex-direction: column;
             flex: 1;
-            justify-content: flex-end;
-            gap: 0.8rem;
+            justify-content: space-between;
             width: 100%;
             padding: 0.5rem;
+
+            .upper-links{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+
         }
         .mobile{
             display: none;

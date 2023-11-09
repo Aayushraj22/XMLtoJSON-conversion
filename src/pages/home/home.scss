@@ -2,12 +2,12 @@
 
 .home{
     // background: pink;
+    justify-content: space-evenly;
     height: 100%;
     width: 100%;
     flex: 1;
     display: grid;
     gap: 20px;
-    padding: 20px;
     grid-template-columns: repeat(4, 24%);
     grid-auto-rows: minmax(180px, auto);
 

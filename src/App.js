@@ -30,8 +30,7 @@ function App() {
 
     <div className="main">
       <div className="Navbar">
-      <Navbar />
-  
+        <Navbar />
       </div>
 
       <div className="container">
@@ -54,9 +53,9 @@ function App() {
       </div>
 
       <div>
-      <Footer />
-
+        <Footer />
       </div>
+
     </div>
   );
 }

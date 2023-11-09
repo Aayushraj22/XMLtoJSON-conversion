@@ -17,27 +17,27 @@ function Menus() {
   return (
 
     <div className="menu" >
-      {menu.map((item => (
-        <div className="item" key={item.id}>
-          <span className='title'>{item.title.toUpperCase()} </span>
-          {item.listItems.map((listItem) => (
-            <NavLink to={listItem.url} key={listItem.id} end>
-              <img src={listItem.icon} alt={listItem.title} />
-              <span className="listItemTitle">{listItem.title}</span>
-            </NavLink>
-          ))
 
-          }
-        </div>
-
-      )))
-      }
       <div className="item">
+        {menu.map(item => (
+          <NavLink to={item.url} key={item.id} end>
+            <img src={item.icon} alt={item.title} />
+            <span>{item.title}</span>
+          </NavLink>
+        ))}
+
         {isAuthenticated ?
-          <Link onClick={handleLogout}> Logout </Link>
-          : <Link onClick={handleLogin}> Login </Link>
+          <Link onClick={handleLogout}>
+            <img src='logout.png' alt='logout' /> <span>Logout</span> </Link>
+          : <Link onClick={handleLogin}>
+              <img src='login.png' alt='login' /> 
+              <span>Login</span> 
+            </Link>
         }
+
       </div>
+
+      
     </div>
   );
 }

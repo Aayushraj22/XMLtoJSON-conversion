@@ -61,8 +61,14 @@ function Navbar() {
         <div className="toolbar">
           <span><h4>{user.name}</h4></span>
           <div className="links">
-            <span className='mobile' onClick={() => handleClick('/')}>Home </span>
-            <span className='mobile' onClick={() => handleClick('/file')}>upload </span>
+            <div className="upper-links">
+              
+              <span className='mobile' onClick={() => handleClick('/')}>Home </span>
+              <span className='mobile' onClick={() => handleClick('/file')}>Upload </span>
+              <span className='mobile' onClick={() => handleClick('/user')}>User </span>
+              <span className='mobile' onClick={() => handleClick('/users')}>Users </span>
+            </div>
+
             <span style={{cursor: "pointer", color: 'dodgerblue'}} onClick={handleLogout}>Logout </span>
 
           </div>
