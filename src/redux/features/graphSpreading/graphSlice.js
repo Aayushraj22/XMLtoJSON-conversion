@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { topDealUsers, genderData, demoUser } from "../data";
+import { topDealUsers, genderData, demoUser } from "../../../data";
 
 
 
 const initialState = { file: topDealUsers, genderRatio: genderData, tableData: demoUser };
 
 const counterSlice = createSlice({
-  name: "upload",
+  name: "graph",
   initialState,
   reducers: {
     toGenderRatio(state, action) {       

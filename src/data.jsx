@@ -1,42 +1,45 @@
-export const menu = [
-        {
-          id: 1,
-          title: "Homepage",
-          url: "/",
-          icon: "home.svg",
-        },
-        {
-          id: 2,
-          title: "Profile",
-          url: "/users/1",
-          icon: "profile.svg",
-        },
-        {
-          id: 4,
-          title: "Users",
-          url: "/users",
-          icon: "user.svg",
-        },
-        {
-          id: 3,
-          title: 'Upload',
-          url: '/file',
-          icon: 'upload.svg',
-        },
-        {
-          id: 5,
-          title: "Settings",
-          url: "/setting",
-          icon: "setting.svg",
-        },
-        {
-          id: 6,
-          title: "Charts",
-          url: "/chart",
-          icon: "chart.svg",
-        },
-      ]
-    
+import {IoHomeOutline, IoCloudUploadOutline, IoSettingsOutline, IoStatsChartOutline} from 'react-icons/io5';
+import { FiUser, FiUsers } from "react-icons/fi";
+import './styles/global.scss'
+
+  export const menu = [
+    { 
+      id: 1,
+      icon: <IoHomeOutline className='icon'/>,
+      title: 'home',
+      url: '/home',
+    },
+    {
+      id: 2,
+      icon: <FiUser className='icon'/>,
+      title: 'profile',
+      url: '/users/1',
+    },
+    {
+      id: 3,
+      icon: <FiUsers className='icon'/>,
+      title: 'users',
+      url: '/users',
+    },
+    { 
+      id: 4,
+      icon: <IoCloudUploadOutline className='icon'/>,
+      title: 'upload',
+      url: '/file',
+    },
+    {
+      id: 5,
+      icon: <IoSettingsOutline className='icon'/>,
+      title: 'setting',
+      url: '/setting',
+    },
+    {
+      id: 6,
+      icon: <IoStatsChartOutline className='icon'/>,
+      title: 'chart',
+      url: '/chart',
+    }
+  ]
   
   export const topDealUsers = [
     {

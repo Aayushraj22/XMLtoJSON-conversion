@@ -4,12 +4,12 @@ import { useSelector } from "react-redux";
 
 function PieChartBox() {
 
-  const state = useSelector(state => state)
+  const state = useSelector(state => state.graph)
   let data = state.genderRatio
 
   return (
     <div className="pieChartBox">
-      <h1>Genders</h1>
+      <h1>Gender Ratio</h1>
       <div className="chart">
         <ResponsiveContainer
           width="99%"

@@ -89,6 +89,7 @@ function Single({id, img, title, info, chart, activities}) {
           </ul>
         )}
       </div>
+      
     </div>
   );
 }

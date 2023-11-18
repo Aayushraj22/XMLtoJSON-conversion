@@ -4,9 +4,9 @@
   @include flex-C;
   flex: 1;
   height: 100%;
-  // border: 1px solid ;
   flex-direction: column;
   gap: 1rem;
+  
 
   .label {
     @include flex-C;

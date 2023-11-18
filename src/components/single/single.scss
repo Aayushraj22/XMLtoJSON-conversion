@@ -1,6 +1,10 @@
 .Single{
     display: flex;
 
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
     .view{
         flex: 1;
         display: flex;
@@ -93,6 +97,15 @@
                     min-width: 480px;
                     background: #f514271e;
                     padding: 15px;
+
+                    @media screen and (max-width: 768px) {
+                        min-width: 440px
+                    }
+
+                    @media screen and (max-width: 450px) {
+                        min-width: 280px;
+                    }
+                    
 
                     p{
                         margin-bottom: 5px;

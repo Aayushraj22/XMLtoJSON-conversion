@@ -9,7 +9,7 @@ import { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router } from "react-router-dom";
 import Auth0ProviderWithNavigate from "./components/Auth0ProviderWithNavigate";
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import store from "./redux/features/store";
 
 // const onRedirectCallback = (appState) => {
 //   history.push(

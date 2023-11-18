@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 import {StudentLimitedData} from '../../utils/functions'
 
 function Topbox() {
-  const state = useSelector(state => state)
+  const state = useSelector(state => state.graph)
+  console.log('state: -', state)
 
   // filter to get name, email, imageurl 
   // console.log('jsonData : ',jsonData.file);

@@ -3,9 +3,9 @@ import './file.scss';
 import { BsCloudUpload } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import Papa from "papaparse";
-import Button from "../../components/Button";
+import Button from "../../components/button/Button";
 import { useDispatch } from "react-redux";
-import { toFileUploaded, toGenderRatio, toNewTableData } from "../../redux/fileUpload";
+import { toFileUploaded, toGenderRatio, toNewTableData } from "../../redux/features/graphSpreading/graphSlice";
 import { getGenderRatio } from "../../utils/functions";
 
 

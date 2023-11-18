@@ -11,9 +11,9 @@ function Users() {
   const [open, setOpen] = useState(false)
 
 
-  const state = useSelector(state => state)
+  const state = useSelector(state => state.graph.tableData)
 
-  const data = state.tableData
+  // const data = state.tableData
 
 
 
@@ -56,7 +56,7 @@ function Users() {
   // },
   // ];
 
-  const col = Object.keys(data[0]).map(item => (
+  const col = Object.keys(state[0]).map(item => (
       {
         field: item, 
         headerName: item.slice(0,1).toUpperCase() + item.slice(1), 
@@ -75,8 +75,8 @@ return (
         <h1>Users</h1>
         <button onClick={() => setOpen(true)}> Add new user</button>
       </div>
-      <DataTable columns={col} rows={data} slug='users'/>
-      {open && <Add setOpen={setOpen} colums={col} slug='users' rows={data}/>} 
+      <DataTable columns={col} rows={state} slug='users'/>
+      {open && <Add setOpen={setOpen} colums={col} slug='users' rows={state}/>} 
     </div>
   )
 

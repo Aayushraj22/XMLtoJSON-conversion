@@ -2,6 +2,7 @@
 
 .menu{
     width: 100%;
+    font-size: 0.9rem;
 
     .item{
         display: flex;
@@ -15,25 +16,16 @@
             border-radius: 5px;
             padding: 10px;
 
-            img{
-                height: 30px;
-                width: 30px;
-                object-fit: cover;
-                position: relative;
 
-                @media screen and (min-width: 768px) and (max-width: 1024px) {
-                    height: 40px;
-                    width: 40px;
-                }
-
+            @media screen and (max-width:1024px) {
+                justify-content: center;
             }
             
             &:hover{
-                background: $soft-bg;
+                background: rgb(81, 146, 245);
 
-                & > img{
-                    animation: updownEffect 1s ease-in-out infinite;
-                    
+                & > .icon{
+                    animation: updownEffect 1s ease-in-out infinite;    
                 }
             }
 
@@ -47,7 +39,7 @@
         }
 
         & > a.active{
-            background-color: navy;
+            background-color: rgba(21, 21, 236, 0.717);
         }
 
 
@@ -60,8 +52,14 @@
     0%{
        top: 0; 
     }
-    50%{
+    25%{
         top: 3px;
+    }
+    50%{
+        top: 0;
+    }
+    75%{
+        top: -3px;
     }
     100%{
         top: 0;

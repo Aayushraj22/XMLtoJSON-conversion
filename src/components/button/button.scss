@@ -1,0 +1,17 @@
+.btn{
+  padding: 0.8rem 2rem;
+  border: none;
+  background-color: #0303fc;
+  color: white;
+
+  border-radius: 0.3rem;
+  font-family: "Inter";
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0303b5;
+  }
+}

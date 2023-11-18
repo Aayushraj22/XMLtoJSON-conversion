@@ -10,25 +10,26 @@ import Error from "./components/Error";
 import File from "./pages/file/File";
 import Protected from "./components/Protected";
 // import IsAuth from "./components/IsAuth";
-import {Routes,Route} from 'react-router-dom'
-import Users from './pages/users/Users'
-import User from './pages/user/User'
-
+import { Routes, Route } from "react-router-dom";
+import Users from "./pages/users/Users";
+import User from "./pages/user/User";
+import { useSelector } from "react-redux";
 
 // import Auth0ProviderWithNavigate from "./components/Auth0ProviderWithNavigate";
 
 function App() {
   // app basically mera layout hai
-  const {isLoading,isAuthenticated} = useAuth0()
-
-  console.log('isloading ffrom app : ', isLoading)
-  console.log('auth : ',isAuthenticated)
-  if(isLoading)
-    return <Loader />
+  const { isLoading, isAuthenticated } = useAuth0();
+  const state = useSelector(state => state.themeColor)
+  
+  console.log("isloading ffrom app : ", isLoading);
+  console.log("auth : ", isAuthenticated);
+  if (isLoading) return <Loader />;
 
   return (
-
-    <div className="main">
+    <div className='main' 
+      style={{backgroundColor: state.background, color: state.color}}
+    >
       <div className="Navbar">
         <Navbar />
       </div>
@@ -41,24 +42,22 @@ function App() {
         <div className="contentContainer">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Protected component={Home} />} /> 
+            <Route path="/home" element={<Protected component={Home} />} />
             <Route path="/users" element={<Protected component={Users} />} />
             <Route path="/users/:id" element={<Protected component={User} />} />
-            
+
             <Route path="/file" element={<Protected component={File} />} />
-            
+
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
       </div>
 
-      <div>
+      <div className="footer-content">
         <Footer />
       </div>
-
     </div>
   );
 }
 
 export default App;
-

@@ -17,31 +17,4 @@ h6 {
 /* font-family: 'Inter', sans-serif;
 font-family: 'Poppins', sans-serif; */
 
-.App {
-  max-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: rgba(183, 181, 181, 0.388);
-  position: relative;
 
-  .NavigationHeader {
-    position: sticky;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    right: 0;
-    backdrop-filter: blur(20px);
-    height: 10vh;
-  }
-
-  .AppRoutesPage {
-    display: flex;
-    flex: 1;
-  }
-}
-
-.Layout {
-    width: 100vw;
-    height: 100vh;
-}

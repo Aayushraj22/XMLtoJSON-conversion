@@ -7,67 +7,69 @@
     padding: 20px;
     position: relative;
     height: 100%;
+    // border-bottom: 3px solid $soft-bg;
 
     .logo{
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         font-weight: 500;
         gap: 1rem;
 
-        img{
+        .profile-dimension{
             width: 40px;
             height: 40px;
-
+            object-fit: cover;
+            border-radius: 10%;
         }
 
     }
 
-    .icons{
+    .featureSection{
         display: flex;
+        gap: 1rem;
         align-items: center;
-        gap: 2rem;
 
-        .notification{
-            position: relative;
-
-            span{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 16px;
-                width: 16px;
-                border-radius: 50%;
-                background: red;
-                font-style: 12px;
-                position: absolute;
-                top: -10px;
-                right: -10px;
-            }
-        }
-
-        .user{
+        .icons{
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 1rem;
 
-            img{
-                width: 26px;
-                height: 26px;
-                object-fit: cover;
-                border-radius: 50%;
+            .notification{
+                position: relative;
+
+                span{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 16px;
+                    width: 16px;
+                    border-radius: 50%;
+                    background: red;
+                    color: white;
+                    font-size: 12px;
+                    position: absolute;
+                    top: -8px;
+                    right: -8px;
+                }
             }
-        }
 
-        .not-mobile{
+            .icon{
+                height: 20px;
+                width: 20px;
+            }
+
+            .not-mobile{
+                
+                @media screen and (max-width : 768px) {
+                    display: none;
+                }
+            }
+
             
-            @media screen and (max-width : 768px) {
-                display: none;
-            }
+
+            
         }
 
-        
-
-        
     }
 
     .toolbar{
