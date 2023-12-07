@@ -1,4 +1,3 @@
-import { GridColDef } from "@mui/x-data-grid";
 import "./add.scss";
 
 // type Props = {
