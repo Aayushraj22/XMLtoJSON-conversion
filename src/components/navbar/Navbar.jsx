@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import Button from '../button/Button';
 import { useNavigate } from 'react-router-dom'
-import { useSelector } from "react-redux";
 import ThemeChanger from "../../redux/features/Theme/ThemeChanger";
 import { IoSearchOutline, IoSettingsOutline, IoNotificationsOutline, IoPersonCircleOutline } from "react-icons/io5";
 
@@ -12,9 +11,6 @@ import { IoSearchOutline, IoSettingsOutline, IoNotificationsOutline, IoPersonCir
 
 function Navbar() {
 
-  const state = useSelector(state => state)
-  console.log('theme : -' , state.themeColor)
-  // perfect doing
 
   const navigate = useNavigate();
   const { isAuthenticated, user, loginWithRedirect, logout } = useAuth0()
@@ -46,8 +42,9 @@ function Navbar() {
             <IoPersonCircleOutline className="profile-dimension"/>
           }
         </div>
-        {/* <img src={isAuthenticated ? user.picture : 'profile.png'} alt="" /> */}
-        <span>{isAuthenticated ? user.nickname : <span style={{ fontSize: '1.2rem' }}>Hey User <span style={{fontSize: '18px'}}>👋</span></span>}</span>
+        <span style={{ fontSize: '1.2rem' }}>
+          {isAuthenticated ? user.nickname  : 'Welcome'}
+        </span>
       </div>
 
       <div className="featureSection">
@@ -70,19 +67,18 @@ function Navbar() {
       </div>
 
       {isOpenToolbar &&
-        <div className="toolbar">
+        <div className="toolbar" >
           <span><h4>{user.name}</h4></span>
           <div className="links">
-            <div className="upper-links">
+            <ul className="upper-links">
               
-              <span className='mobile' onClick={() => handleClick('/')}>Home </span>
-              <span className='mobile' onClick={() => handleClick('/file')}>Upload </span>
-              <span className='mobile' onClick={() => handleClick('/users/1')}>User </span>
-              <span className='mobile' onClick={() => handleClick('/users')}>Users </span>
-            </div>
+              <li className='mobile' onClick={() => handleClick('/')}>Home </li>
+              <li className='mobile' onClick={() => handleClick('/file')}>Upload </li>
+              <li className='mobile' onClick={() => handleClick('/users/1')}>User </li>
+              <li className='mobile' onClick={() => handleClick('/users')}>Users </li>
+            </ul>
 
-            <span style={{cursor: "pointer", color: 'dodgerblue'}} onClick={handleLogout}>Logout </span>
-
+            <span style={{cursor: "pointer", color: 'blue', fontWeight: 500, }} onClick={handleLogout}>Logout </span>
           </div>
         </div>
       }

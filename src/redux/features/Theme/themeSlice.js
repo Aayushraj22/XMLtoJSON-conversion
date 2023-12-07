@@ -5,7 +5,6 @@ const initialState = {
     color: 'white',
 }
 
-
 const themeSlice = createSlice({
     name: 'themeColor',
     initialState,
@@ -23,6 +22,5 @@ const themeSlice = createSlice({
 })
 
 export const {dark, light} = themeSlice.actions
-
 export default themeSlice.reducer
 
